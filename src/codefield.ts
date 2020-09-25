@@ -2,7 +2,7 @@
  * A class that contain elements for this game
  * @author cyruscchan
  */
-class codefield {
+class CodeField {
     static ship = [
         {"name":"Mainframe","size":5},
         {"name":"Server","size":5},

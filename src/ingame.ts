@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
  * Process for player 1 (Setter)
  * @author cyruscchan
  */
-interface playerone {
+interface PlayerOne {
     /**
      * Set computer
      */
@@ -21,7 +21,7 @@ interface playerone {
  * A flow for executing this game
  * @author cyruscchan
  */
-class gameflow extends codefield {
+class GameFlow extends CodeField {
     private onePOp: any;
     /**
      * 
@@ -31,18 +31,18 @@ class gameflow extends codefield {
         super();
         var deployed:number = 0;
         if (!oneP) {
-            this.onePOp = class implements playerone {
+            this.onePOp = class implements PlayerOne {
                 deploy(): void {
                     do {
 
-                    } while (deployed < codefield.ship.length);
+                    } while (deployed < CodeField.ship.length);
                 }
                 invalid(x: number, y: number, vert:boolean): boolean {
                     throw new Error('Method not implemented.');
                 }
-            }
+            };
         } else {
-            this.onePOp = class implements playerone {
+            this.onePOp = class implements PlayerOne {
                 deploy(): void {
                     throw new Error('Method not implemented.');
                 }
@@ -50,7 +50,7 @@ class gameflow extends codefield {
                     throw new Error('Method not implemented.');
                 }
                 
-            }
+            };
         }
     }
     public startGame() {
