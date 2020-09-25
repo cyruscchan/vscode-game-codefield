@@ -26,7 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
- -VS Code Version [e.g. `1.49.0`]
+ - VS Code Version [e.g. `1.49.0`]
 
 **Additional context**
 Add any other context about the problem here.
