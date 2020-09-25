@@ -1,65 +1,33 @@
-# vscode-game-codefield README
+# vscode-game-codefield
 
-This is the README for your extension "vscode-game-codefield". After writing up a brief description, we recommend including the following sections.
+Battleship (with developer themed) in VS CODE!!!
 
-## Features
+![WTF](https://media1.tenor.com/images/36bf607864973b75028ce2ef9dad150c/tenor.gif?itemid=5470297)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Introduction
 
-For example if there is an image subfolder under your extension project workspace:
+You can play ~~battleship~~ codefield in VS Code ~~(and no one notice you are not working)~~ 
 
-\!\[feature X\]\(images/feature-x.png\)
+## How to play
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Please follow the input box and wait result
 
-## Requirements
+## Requirments
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* 1-2 Players
 
-## Extension Settings
+* Known English (Welcome to fork, add language pack and pull request ~~since I have no time to translate~~)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+* Visual Studio Code (`1.49.0` or above)
 
-For example:
+* ~~Fully charged laptop~~
 
-This extension contributes the following settings:
+* ~~11 Gen Intel Core i9 and AMD 4th Gen Ryzen with nVidia RTX 3090~~![Ummm](https://i.kym-cdn.com/photos/images/original/001/416/688/925.jpg_large)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* Have fun
 
-## Known Issues
+* ~~Able to avoid your supervisor~~
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## License
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT
