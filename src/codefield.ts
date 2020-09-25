@@ -1,5 +1,3 @@
-import * as vscode from 'vscode';
-
 /**
  * A class that contain elements for this game
  * @author cyruscchan
