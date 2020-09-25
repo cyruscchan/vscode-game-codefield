@@ -11,69 +11,48 @@ class codefield {
         {"name":"Single-Board Computer","size":2},
         {"name":"Embedded","size":2}
     ];
-    private static field = (function(){
+    private field = (function(){
         var row = new Array(16);
         row.forEach(y => {
             y = new Array(row.length);            
         });
         return row;
     });
+    /**
+     * Get new grid
+     */
     public newGrid() {
-        return codefield.field;
+        return this.field;
     }
-}
-
-/**
- * Process for player 1 (Setter)
- * @author cyruscchan
- */
-interface playerone {
     /**
-     * Set computer
+     * A "decoder" that convert hex to dec
+     * @param hex hex from string
      */
-    deploy():void;
-    /**
-     * Check is it valid position for deploying
-     * @param x X position (Column)
-     * @param y Y position (Row)
-     */
-    invalid(x:number, y:number):boolean;
-}
-
-/**
- * A flow for executing this game
- * @author cyruscchan
- */
-class gameflow extends codefield {
-    private onePOp: any;
-    /**
-     * 
-     * @param oneP Does player one is human or not
-     */
-    constructor(oneP:boolean) {
-        super();
-        var deployed:number = 0;
-        if (!oneP) {
-            this.onePOp = class implements playerone {
-                deploy(): void {
-                    do {
-
-                    } while (deployed < codefield.ship.length);
-                }
-                invalid(x: number, y: number): boolean {
-                    throw new Error('Method not implemented.');
-                }
-            }
-        } else {
-            this.onePOp = class implements playerone {
-                deploy(): void {
-                    throw new Error('Method not implemented.');
-                }
-                invalid(x: number, y: number): boolean {
-                    throw new Error('Method not implemented.');
-                }
-                
-            }
+    public static hexDecode(hex:string):number {
+        if (hex.length!==1) {
+            throw new RangeError("Calm down and input one number only");
         }
+        var convRes = 0;
+        switch (hex.toUpperCase()) {
+            case "F": ++convRes;
+            case "E": ++convRes;
+            case "D": ++convRes;
+            case "C": ++convRes;
+            case "B": ++convRes;
+            case "A": ++convRes;
+            case "9": ++convRes;
+            case "8": ++convRes;
+            case "7": ++convRes;
+            case "6": ++convRes;
+            case "5": ++convRes;
+            case "4": ++convRes;
+            case "3": ++convRes;
+            case "2": ++convRes;
+            case "1": ++convRes; break;
+            case "0": break; //Do absolute nothing
+            default: throw new TypeError("Onlu accept 0-F, you should known this...");
+        }
+        return convRes;
     }
 }
+
