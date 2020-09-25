@@ -3,6 +3,12 @@
 	"displayName": "codefield",
 	"description": "Battleship (but developer themed) available in VS CODE!",
 	"version": "0.0.1",
+	"publisher": "cyruscchan",
+	"author": {
+		"name": "Cyrus Chan",
+		"email": "cyruschan1212@outlook.com",
+		"url": "https://cyruscchan.github.io"
+	},
 	"engines": {
 		"vscode": "^1.49.0"
 	},

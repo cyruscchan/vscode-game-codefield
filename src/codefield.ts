@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 /**
  * A class that contain elements for this game
- * @author rk0_d 
+ * @author cyruscchan
  */
 class codefield {
     static ship = [
@@ -27,7 +27,7 @@ class codefield {
 
 /**
  * Process for player 1 (Setter)
- * @author rk0_d
+ * @author cyruscchan
  */
 interface playerone {
     /**
@@ -44,7 +44,7 @@ interface playerone {
 
 /**
  * A flow for executing this game
- * @author rk0_d
+ * @author cyruscchan
  */
 class gameflow extends codefield {
     private onePOp: any;
