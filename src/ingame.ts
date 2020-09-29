@@ -34,7 +34,7 @@ class GameFlow extends CodeField {
             this.onePOp = class implements PlayerOne {
                 deploy(): void {
                     do {
-
+                        //Do human deploy
                     } while (deployed < CodeField.ship.length);
                 }
                 invalid(x: number, y: number, vert:boolean): boolean {
@@ -44,7 +44,9 @@ class GameFlow extends CodeField {
         } else {
             this.onePOp = class implements PlayerOne {
                 deploy(): void {
-                    throw new Error('Method not implemented.');
+                    do {
+                        //Do automated deploy
+                    } while (deployed < CodeField.ship.length);
                 }
                 invalid(x: number, y: number, vert:boolean): boolean {
                     throw new Error('Method not implemented.');

@@ -12,16 +12,16 @@ class CodeField {
         {"name":"Embedded","size":2}
     ];
     private field = (function(){
-        var row = new Array(16);
-        row.forEach(y => {
-            y = new Array(row.length);            
+        var newGrid = new Array(16);
+        newGrid.forEach(y => {
+            y = new Array(newGrid.length);            
         });
-        return row;
+        return newGrid;
     });
     /**
      * Get new grid
      */
-    public newGrid() {
+    public createGrid() {
         return this.field;
     }
     /**
@@ -50,7 +50,7 @@ class CodeField {
             case "2": ++convRes;
             case "1": ++convRes; break;
             case "0": break; //Do absolute nothing
-            default: throw new TypeError("Onlu accept 0-F, you should known this...");
+            default: throw new TypeError("Only accept 0-F, you should known this...");
         }
         return convRes;
     }
