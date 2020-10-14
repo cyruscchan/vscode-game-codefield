@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+
 /**
  * Process for player 1 (Setter)
  * @author cyruscchan
@@ -21,7 +22,7 @@ interface PlayerOne {
  * A flow for executing this game
  * @author cyruscchan
  */
-class GameFlow extends CodeField {
+export class GameFlow extends CodeField {
     private onePOp: any;
     /**
      * 
@@ -29,12 +30,18 @@ class GameFlow extends CodeField {
      */
     constructor(oneP:boolean) {
         super();
-        var deployed:number = 0;
+        var deployed:number = 0; //Total of deployed ship, also as id of the 'ship'
         if (!oneP) {
             this.onePOp = class implements PlayerOne {
                 deploy(): void {
                     do {
+                        var rackSet:boolean = false;
                         //Do human deploy
+                        while (!rackSet) {
+                            const userDeployLoc = vscode.window.showInputBox({
+                                placeHolder: "Enter the hex-location to deploy " + CodeField.ship[deployed].name + " (Size: " + CodeField.ship[deployed].size + "). Press Esc to exit"
+                            });
+                        }
                     } while (deployed < CodeField.ship.length);
                 }
                 invalid(x: number, y: number, vert:boolean): boolean {
@@ -55,6 +62,7 @@ class GameFlow extends CodeField {
             };
         }
     }
+    
     public startGame() {
         this.onePOp.deploy();
     }

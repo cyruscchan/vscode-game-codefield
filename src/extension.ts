@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { GameFlow } from './ingame';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -16,8 +17,35 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('vscode-game-codefield.activateGame', () => {
 		// The code you place here will be executed every time your command is executed
 
+		//Game class
+		
+
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Running Codefield...');
+
+		//Ask user is playing as 2P
+		vscode.window.showInformationMessage("Player no.",...["1 Player","2 Players"])
+					 .then(playerMode=>{
+						if (typeof(playerMode)!==undefined) {
+							//Condition for playing with computer
+							var onePlayer:boolean = true;
+							//Parse button value to game flow
+							switch (playerMode) {
+								case "1 Player":
+									onePlayer = true;
+									break;
+								case "2 Player":
+									onePlayer = false;
+									break;
+							}
+							var flow = new GameFlow(onePlayer);
+							flow.startGame();
+						}
+					 });
+
+		//Call game module
+		
+		
 	});
 
 	context.subscriptions.push(disposable);
